@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangle calulator</title>
+    <title>Triangle Area Calculator</title>
 </head>
+
 <body>
     <h2>Calculate the Area of a Triangle using Heron's Formula</h2>
 
@@ -31,37 +31,24 @@
         $side2 = $_POST['side2'];
         $side3 = $_POST['side3'];
 
-    // Validate triangle inequality theorem (optional but recommended)
-    if (($side1 + $side2 > $side3) && ($side1 + $side3 > $side2) && ($side2 + $side3 > $side1)) {
-        // Calculate semi-perimeter (s)
-        $s = ($side1 + $side2 + $side3) / 2;
+        // Validate triangle inequality theorem (optional but recommended)
+        if (($side1 + $side2 > $side3) && ($side1 + $side3 > $side2) && ($side2 + $side3 > $side1)) {
+            // Calculate semi-perimeter (s)
+            $s = ($side1 + $side2 + $side3) / 2;
 
-        // Calculate the area using Heron's formula without sqrt (using ** 0.5)
-        $area_squared = $s * ($s - $side1) * ($s - $side2) * ($s - $side3);
-        $area = $area_squared ** 0.5; // Equivalent to sqrt()
+            // Calculate the area using Heron's formula without sqrt (using ** 0.5)
+            $area_squared = $s * ($s - $side1) * ($s - $side2) * ($s - $side3);
+            $area = $area_squared ** 0.5; // Equivalent to sqrt()
 
-        // Format the result to two decimal places
-        $formatted_area = number_format($area, 2);
+            // Format the result to two decimal places
+            $formatted_area = number_format($area, 2);
 
-         // Display the result
-         echo "<h3>The area of the triangle is: $formatted_area</h3>";
+            // Display the result
+            echo "<h3>The area of the triangle is: $formatted_area</h3>";
         } else {
             echo "<p style='color:red;'>Error: The given sides do not form a valid triangle.</p>";
         }
     }
-   ?>
-   
-    <?php
-    // Create an array of fruits with at least five elements
-    $fruits = ["Apple", "Banana", "Orange", "Grapes", "Mango"];
-
-    // Use a for loop to display each element in an ordered list
-    echo "<ol>";
-        for ($i = 0; $i < count($fruits); $i++) {
-     echo "<li>" . $fruits[$i] . "</li>";
-    }  
-        echo "</ol>";
     ?>
-
 </body>
 </html>
