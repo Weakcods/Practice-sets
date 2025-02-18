@@ -7,6 +7,21 @@
     <title>Triangle calulator</title>
 </head>
 <body>
-    
+    <h2>Calculate the Area of a Triangle using Heron's Formula</h2>
+
+    <!-- HTML Form -->
+    <form method="POST" action="">
+        <label for="side1">Side 1:</label>
+        <input type="number" step="any" id="side1" name="side1" required><br><br>
+
+        <label for="side2">Side 2:</label>
+        <input type="number" step="any" id="side2" name="side2" required><br><br>
+
+        <label for="side3">Side 3:</label>
+        <input type="number" step="any" id="side3" name="side3" required><br><br>
+
+        <button type="submit">Calculate Area</button>
+    </form>
+
 </body>
 </html>
