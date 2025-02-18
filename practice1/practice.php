@@ -43,6 +43,12 @@
         // Format the result to two decimal places
         $formatted_area = number_format($area, 2);
 
+         // Display the result
+         echo "<h3>The area of the triangle is: $formatted_area</h3>";
+        } else {
+            echo "<p style='color:red;'>Error: The given sides do not form a valid triangle.</p>";
+        }
+    }
    ?>
 </body>
 </html>
