@@ -23,5 +23,14 @@
         <button type="submit">Calculate Area</button>
     </form>
 
+    <?php
+    // Check if form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get input values from the form
+        $side1 = $_POST['side1'];
+        $side2 = $_POST['side2'];
+        $side3 = $_POST['side3'];
+    ?>
+    
 </body>
 </html>
