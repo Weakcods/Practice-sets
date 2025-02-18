@@ -7,6 +7,7 @@
     <title>Triangle calulator</title>
 </head>
 <body>
+    <h2>Calculate the Area of a Triangle using Heron's Formula</h2>
     
 </body>
 </html>
