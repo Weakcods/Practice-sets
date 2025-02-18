@@ -36,6 +36,13 @@
         // Calculate semi-perimeter (s)
         $s = ($side1 + $side2 + $side3) / 2;
 
+        // Calculate the area using Heron's formula without sqrt (using ** 0.5)
+        $area_squared = $s * ($s - $side1) * ($s - $side2) * ($s - $side3);
+        $area = $area_squared ** 0.5; // Equivalent to sqrt()
+
+        // Format the result to two decimal places
+        $formatted_area = number_format($area, 2);
+
    ?>
 </body>
 </html>
