@@ -30,7 +30,12 @@
         $side1 = $_POST['side1'];
         $side2 = $_POST['side2'];
         $side3 = $_POST['side3'];
-    ?>
-    
+
+    // Validate triangle inequality theorem (optional but recommended)
+    if (($side1 + $side2 > $side3) && ($side1 + $side3 > $side2) && ($side2 + $side3 > $side1)) {
+        // Calculate semi-perimeter (s)
+        $s = ($side1 + $side2 + $side3) / 2;
+
+   ?>
 </body>
 </html>
