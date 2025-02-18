@@ -40,6 +40,33 @@
         // Q3 output of var_dump($cashOnHand) = float(10.5)
         var_dump($cashOnHand) // float(10.5)
     ?>
-    
+
+
+?>
+
+     <?php
+        // Q4 what character is used to concatenate strings? = .(dot)
+      
+       echo 5 + 5; //10
+       echo 10-6; //4
+       echo 5*10; //25
+       echo 10/2; //5
+         echo 10**3; //1000
+       ?>
+
+       <?php
+
+        // Q5 output of echo Host;? = localhost
+       define('Host', 'localhost');
+       define('User', 'root');
+       echo (Host); //localhost
+     ?>
+
+    <?php
+        //Q6. Define PHP the variable PI with value 3.1416?
+        $PI = 3.1416;
+        
+    ?>
+
 </body>
 </html>
