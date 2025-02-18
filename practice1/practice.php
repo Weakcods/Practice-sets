@@ -50,5 +50,18 @@
         }
     }
    ?>
+   
+    <?php
+    // Create an array of fruits with at least five elements
+    $fruits = ["Apple", "Banana", "Orange", "Grapes", "Mango"];
+
+    // Use a for loop to display each element in an ordered list
+    echo "<ol>";
+        for ($i = 0; $i < count($fruits); $i++) {
+     echo "<li>" . $fruits[$i] . "</li>";
+    }  
+        echo "</ol>";
+    ?>
+
 </body>
 </html>
