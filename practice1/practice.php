@@ -30,7 +30,25 @@
         $side1 = $_POST['side1'];
         $side2 = $_POST['side2'];
         $side3 = $_POST['side3'];
-    ?>
-    
+
+    // Validate triangle inequality theorem (optional but recommended)
+    if (($side1 + $side2 > $side3) && ($side1 + $side3 > $side2) && ($side2 + $side3 > $side1)) {
+        // Calculate semi-perimeter (s)
+        $s = ($side1 + $side2 + $side3) / 2;
+
+        // Calculate the area using Heron's formula without sqrt (using ** 0.5)
+        $area_squared = $s * ($s - $side1) * ($s - $side2) * ($s - $side3);
+        $area = $area_squared ** 0.5; // Equivalent to sqrt()
+
+        // Format the result to two decimal places
+        $formatted_area = number_format($area, 2);
+
+         // Display the result
+         echo "<h3>The area of the triangle is: $formatted_area</h3>";
+        } else {
+            echo "<p style='color:red;'>Error: The given sides do not form a valid triangle.</p>";
+        }
+    }
+   ?>
 </body>
 </html>
